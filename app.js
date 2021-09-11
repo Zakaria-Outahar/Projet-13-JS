@@ -31,12 +31,6 @@ class Particule{
         if(this.y + this.taille > canvas.height || this.y - this.taille < 0){
             this.directionY = -this.directionY;
         }
-        if(this.directionX < -1 || this.directionX > 1){
-            directionX = (Math.random() * 2) - 1;
-        }
-        if(this.directionY < -1 || this.directionY > 1){
-            directionY = (Math.random() * 2) - 1;
-        }
         this.x += this.directionX;
         this.y += this.directionY;
         this.dessine();
@@ -81,7 +75,6 @@ animation();
 
 function resize(){
     init();
-    animation();
 }
 
 let doIt;
